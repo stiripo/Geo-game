@@ -1,5 +1,6 @@
 body {
   background-color: rgb(179, 219, 219);
+  margin: 0;
 }
 
 .big-heading {
@@ -22,10 +23,13 @@ body {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 20px;
+
+  margin-left: 40px;
 }
 
+
 .right-side {
-  justify-self: start;
+  justify-self: center;
 }
 
 .score-section {
@@ -48,4 +52,10 @@ body {
 
 .lose {
   background-color: red;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: block;
+  }
 }
