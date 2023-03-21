@@ -1,6 +1,7 @@
 import europeMap from './assets/europe-map_clipped.svg';
-import spain from './assets/spain.svg';
 import './App.css';
+import { CurrentCountry } from './components/CurrentCountry';
+
 
 function App() {
   return (
@@ -10,10 +11,8 @@ function App() {
     </div>
     <div className="right-side">
         <h1 className="big-heading">European Puzzle</h1>
-        <div className="country-name"></div>
-        <div className="country-shape">
-          <img src={spain} alt='country shape'/>
-        </div>
+        
+       <CurrentCountry/>
         <div className="score-section">
             <p>Your score:</p>
             <div className="score-board">
