@@ -15,6 +15,10 @@ body {
   font-size: 40px;
 }
 
+.invisible {
+  height: 0;
+}
+
 .country-shape {
   height: 280px;
 }
