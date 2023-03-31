@@ -6,6 +6,7 @@ export function PuzzlePiece(props) {
 
     let [attempt, setAttempt] = useState(0);
     let [turnEnd, setTurnEnd] = useState(false);
+    let [turnResult, setTurnResult] = useState(null);
 
     function handleDragStart(event) {
         event.preventDefault();
@@ -28,6 +29,9 @@ export function PuzzlePiece(props) {
         if (isCloseEnough || currentAttempt === 3) {
             props.onTurnEnd();
         }
+        if (!isCloseEnough && currentAttempt === 3) {
+            setTurnResult('failure');
+        }
     }
 
     return (
@@ -48,6 +52,7 @@ export function PuzzlePiece(props) {
                         top: props.country.top + 'px',
                         left: props.country.left + 'px',
                     } : {}}
+                    className={turnResult === 'failure' ? 'filter-red' : ''}
                     alt='country shape'
                 />
             </Draggable>

@@ -22,9 +22,8 @@ function App() {
     if (EUROPEAN_COUNTRIES.length > 0) {
       let newPuzzlePiece = pickRandomCountry();
       let allPuzzlePieces = [...puzzlePieces, newPuzzlePiece];
-      console.log(allPuzzlePieces)
+      // console.log(allPuzzlePieces)
       setPuzzlePieces(allPuzzlePieces);
-
     }
 }
 

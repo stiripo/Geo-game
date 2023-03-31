@@ -19,6 +19,10 @@ body {
   height: 0;
 }
 
+.filter-red {
+  filter: invert(20%) sepia(87%) saturate(2770%) hue-rotate(320deg) brightness(94%) contrast(123%);
+}
+
 .country-shape {
   height: 280px;
 }
