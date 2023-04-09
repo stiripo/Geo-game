@@ -2,6 +2,7 @@ import { ERROR_MARGIN } from '../constants';
 import Draggable from 'react-draggable';
 import { useState } from 'react';
 
+
 export function PuzzlePiece(props) {
 
     let [attempt, setAttempt] = useState(0);
@@ -14,13 +15,13 @@ export function PuzzlePiece(props) {
 
     function handleDragStop(event) {
         event.preventDefault();
-        let difX = Math.abs(event.target.getBoundingClientRect().left - props.country.left);
-        let difY = Math.abs(event.target.getBoundingClientRect().top - props.country.top);
-        // console.log(`real coordinates: ${event.target.getBoundingClientRect().left}`);
-        // console.log(`country.left: ${props.country.left}`);
-        // console.log(difX);
+        const mapY = props.myRef.current.getBoundingClientRect().top + window.pageYOffset;
+        const mapX = props.myRef.current.getBoundingClientRect().left + window.pageXOffset;
+        const countryX = event.target.getBoundingClientRect().left + window.pageXOffset;
+        const countryY = event.target.getBoundingClientRect().top + window.pageYOffset;
+        const difX = Math.abs(countryX - mapX - props.country.left);
+        const difY = Math.abs(countryY - mapY - props.country.top);
         const isCloseEnough = Math.sqrt(difX ** 2 + difY ** 2) < ERROR_MARGIN;
-        // console.log(`iscloseEnough value: ${isCloseEnough}`);
         let currentAttempt = attempt + 1;
         setAttempt(currentAttempt);
         setTurnEnd(() => {
@@ -36,7 +37,7 @@ export function PuzzlePiece(props) {
 
     return (
         <div
-            className={turnEnd ? 'invisible' : 'country-shape'}
+            className={turnEnd ? 'invisible' : 'country-info'}
         >
             <div className="country-name">{turnEnd ? '' : props.country.name}</div>
             <Draggable
@@ -60,5 +61,4 @@ export function PuzzlePiece(props) {
     )
 }
 
-// change coordinates for checking position - not relative to the whole viewport, but relative to the map element
-// find better namespaces
+
