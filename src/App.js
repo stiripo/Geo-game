@@ -2,6 +2,7 @@ import europeMap from './assets/europe-map_clipped.svg';
 import { EUROPEAN_COUNTRIES } from './constants';
 import './App.css';
 import { PuzzlePiece } from './components/PuzzlePiece';
+import { ScoreBoard } from './components/ScoreBoard';
 import { useState } from 'react';
 import { useRef } from 'react';
 
@@ -17,6 +18,8 @@ const initialState = pickRandomCountry();
 
 function App() {
 
+  let [winScore, setWinScore] = useState(0);
+  let [loseScore, setLoseScore] = useState(0);
   let [puzzlePieces, setPuzzlePieces] = useState([initialState]);
   const MapRef = useRef(null);
 
@@ -42,15 +45,14 @@ function App() {
         {puzzlePieces.map((country) => <PuzzlePiece
           country={country}
           onTurnEnd={addNewPuzzlePiece}
+          win={() => setWinScore(winScore + 1)}
+          lose={() => setLoseScore(loseScore - 1)}
           myRef={MapRef}
         />)}
-        <div className="score-section">
-          <p>Your score:</p>
-          <div className="score-board">
-            <div className="win">0</div>
-            <div className="lose">0</div>
-          </div>
-        </div>
+        <ScoreBoard
+          win={winScore}
+          lose={loseScore}
+        />
       </div>
     </div>
   );

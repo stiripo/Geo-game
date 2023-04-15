@@ -31,7 +31,12 @@ export function PuzzlePiece(props) {
             props.onTurnEnd();
         }
         if (!isCloseEnough && currentAttempt === 3) {
-            setTurnResult('failure');
+            setTurnResult('lose');
+            props.lose();
+        }
+        if (isCloseEnough) {
+            setTurnResult('win');
+            props.win();
         }
     }
 
@@ -53,7 +58,7 @@ export function PuzzlePiece(props) {
                         top: props.country.top + 'px',
                         left: props.country.left + 'px',
                     } : {}}
-                    className={turnResult === 'failure' ? 'filter-red' : ''}
+                    className={turnResult === 'lose' ? 'filter-red' : ''}
                     alt='country shape'
                 />
             </Draggable>
