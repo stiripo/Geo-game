@@ -1,6 +1,6 @@
 import { ERROR_MARGIN } from '../constants';
 import Draggable from 'react-draggable';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 
 export function PuzzlePiece(props) {
@@ -8,6 +8,7 @@ export function PuzzlePiece(props) {
     let [attempt, setAttempt] = useState(0);
     let [turnEnd, setTurnEnd] = useState(false);
     let [turnResult, setTurnResult] = useState(null);
+    const nodeRef = useRef(null);
 
     function handleDragStart(event) {
         event.preventDefault();
@@ -46,12 +47,14 @@ export function PuzzlePiece(props) {
         >
             <div className="country-name">{turnEnd ? '' : props.country.name}</div>
             <Draggable
+                nodeRef={nodeRef}
                 onStart={handleDragStart}
                 onStop={handleDragStop}
                 position={turnEnd ? { x: 0, y: 0 } : undefined}
                 disabled={turnEnd ? true : false}
             >
                 <img
+                    ref={nodeRef}
                     src={props.country.image}
                     style={turnEnd ? {
                         position: 'absolute',
