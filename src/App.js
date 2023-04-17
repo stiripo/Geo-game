@@ -43,6 +43,7 @@ function App() {
       <div className="right-side">
         <h1 className="big-heading">European Puzzle</h1>
         {puzzlePieces.map((country) => <PuzzlePiece
+          key={country.name}
           country={country}
           onTurnEnd={addNewPuzzlePiece}
           win={() => setWinScore(winScore + 1)}
