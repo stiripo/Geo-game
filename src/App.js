@@ -1,4 +1,4 @@
-import europeMap from './assets/europe-map_clipped.svg';
+import europeMap from './assets/map_europe.svg';
 import { EUROPEAN_COUNTRIES } from './constants';
 import './App.css';
 import { PuzzlePiece } from './components/PuzzlePiece';

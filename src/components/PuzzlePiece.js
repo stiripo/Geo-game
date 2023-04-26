@@ -20,6 +20,7 @@ export function PuzzlePiece(props) {
         const mapX = props.myRef.current.getBoundingClientRect().left + window.pageXOffset;
         const countryX = event.target.getBoundingClientRect().left + window.pageXOffset;
         const countryY = event.target.getBoundingClientRect().top + window.pageYOffset;
+        console.log(`Left: ${countryX}, Top: ${countryY}`);
         const difX = Math.abs(countryX - mapX - props.country.left);
         const difY = Math.abs(countryY - mapY - props.country.top);
         const isCloseEnough = Math.sqrt(difX ** 2 + difY ** 2) < ERROR_MARGIN;
@@ -60,6 +61,7 @@ export function PuzzlePiece(props) {
                         position: 'absolute',
                         top: props.country.top + 'px',
                         left: props.country.left + 'px',
+                        //TODO: on turnend first set position to absolute and leave in the actual place, and after that compare the actual coords with correct coords and smoothly transition from actual to correct.
                     } : {}}
                     className={turnResult === 'lose' ? 'filter-red' : ''}
                     alt='country shape'

@@ -1,5 +1,6 @@
 body {
-  background-color: rgb(179, 219, 219);
+  background-color: rgb(42, 93, 186);
+
   /* margin: 0px 0px 0px 40px; */
   margin: 0;
 }
@@ -32,7 +33,7 @@ body {
 }
 
 .filter-red {
-  filter: invert(20%) sepia(87%) saturate(2770%) hue-rotate(320deg) brightness(94%) contrast(123%);
+  filter: brightness(0) saturate(100%) invert(24%) sepia(90%) saturate(6957%) hue-rotate(356deg) brightness(95%) contrast(105%);
 }
 
 .country-info {
@@ -58,11 +59,11 @@ body {
 }
 
 .win {
-  background-color: blue;
+  background-color: #11be07;
 }
 
 .lose {
-  background-color: red;
+  background-color: #F70707;
 }
 
 @media only screen and (max-width: 600px) {

@@ -12,24 +12,24 @@ export const EUROPEAN_COUNTRIES = [
         name: 'Portugal',
         width: 87.761,
         height: 136.426,
-        left: 10.27500057220459,
-        top: 520.6375122070312,
+        left: 1.5625,
+        top: 555.0375366210938,
         image: portugal
     },
     {
         name: 'Spain',
         width: 248.771,
         height: 224.412,
-        left: 33.275001525878906,
-        top: 491.63751220703125,
+        left: 25.5625,
+        top: 526.0375366210938,
         image: spain
     },
     {
         name: 'France',
         width: 235.186,
         height: 235.769,
-        left: 139.27500915527344,
-        top: 391.63751220703125,
+        left: 128.5625,
+        top: 418.0375061035156,
         image: france
     }
 ];
