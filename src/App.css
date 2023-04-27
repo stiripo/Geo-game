@@ -33,7 +33,13 @@ body {
 }
 
 .filter-red {
+  transition: filter 0.0001s ease-in 0.7s;
   filter: brightness(0) saturate(100%) invert(24%) sepia(90%) saturate(6957%) hue-rotate(356deg) brightness(95%) contrast(105%);
+}
+
+.filter-green {
+  transition: filter 0.0001s ease-in 0.7s;
+  filter: brightness(0) saturate(100%) invert(64%) sepia(27%) saturate(7088%) hue-rotate(78deg) brightness(93%) contrast(106%)
 }
 
 .country-info {

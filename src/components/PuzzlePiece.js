@@ -8,6 +8,9 @@ export function PuzzlePiece(props) {
     let [attempt, setAttempt] = useState(0);
     let [turnEnd, setTurnEnd] = useState(false);
     let [turnResult, setTurnResult] = useState(null);
+    let [readyToSnap, setReadyToSnap] = useState(false);
+    let [countryTop, setCountryTop] = useState('');
+    let [countryLeft, setCountryLeft] = useState('');
     const nodeRef = useRef(null);
 
     function handleDragStart(event) {
@@ -20,18 +23,19 @@ export function PuzzlePiece(props) {
         const mapX = props.myRef.current.getBoundingClientRect().left + window.pageXOffset;
         const countryX = event.target.getBoundingClientRect().left + window.pageXOffset;
         const countryY = event.target.getBoundingClientRect().top + window.pageYOffset;
+
         console.log(`Left: ${countryX}, Top: ${countryY}`);
         const difX = Math.abs(countryX - mapX - props.country.left);
         const difY = Math.abs(countryY - mapY - props.country.top);
         const isCloseEnough = Math.sqrt(difX ** 2 + difY ** 2) < ERROR_MARGIN;
         let currentAttempt = attempt + 1;
         setAttempt(currentAttempt);
-        setTurnEnd(() => {
+        setReadyToSnap(() => {
             return isCloseEnough || currentAttempt === 3;
         });
-        if (isCloseEnough || currentAttempt === 3) {
-            props.onTurnEnd();
-        }
+        // if (isCloseEnough || currentAttempt === 3) {
+        //     props.onTurnEnd();
+        // }
         if (!isCloseEnough && currentAttempt === 3) {
             setTurnResult('lose');
             props.lose();
@@ -40,30 +44,60 @@ export function PuzzlePiece(props) {
             setTurnResult('win');
             props.win();
         }
+        if (isCloseEnough || currentAttempt === 3) {
+            setCountryLeft(countryX);
+            setCountryTop(countryY);
+            setTimeout(() => {
+                setTurnEnd(true);
+                props.onTurnEnd();
+            }, 1500)
+        };
+    };
+
+    function setCountryImagePosition() {
+        if (turnEnd) {
+            return {
+                position: 'absolute',
+                top: props.country.top + 'px',
+                left: props.country.left + 'px',
+                transition: 'all 0.3s ease-in',
+            }
+        };
+        if (readyToSnap) {
+            return {
+                position: 'absolute',
+                top: countryTop + 'px',
+                left: countryLeft + 'px',
+            }
+        };
+    }
+
+    function setCountryColor() {
+        if (turnResult === 'lose') {
+            return 'filter-red'
+        };
+        if (turnResult === 'win') {
+            return 'filter-green'
+        }
     }
 
     return (
         <div
-            className={turnEnd ? 'invisible' : 'country-info'}
+            className={readyToSnap ? 'invisible' : 'country-info'}
         >
-            <div className="country-name">{turnEnd ? '' : props.country.name}</div>
+            <div className="country-name">{readyToSnap ? '' : props.country.name}</div>
             <Draggable
                 nodeRef={nodeRef}
                 onStart={handleDragStart}
                 onStop={handleDragStop}
-                position={turnEnd ? { x: 0, y: 0 } : undefined}
-                disabled={turnEnd ? true : false}
+                position={readyToSnap ? { x: 0, y: 0 } : undefined}
+                disabled={readyToSnap ? true : false}
             >
                 <img
                     ref={nodeRef}
                     src={props.country.image}
-                    style={turnEnd ? {
-                        position: 'absolute',
-                        top: props.country.top + 'px',
-                        left: props.country.left + 'px',
-                        //TODO: on turnend first set position to absolute and leave in the actual place, and after that compare the actual coords with correct coords and smoothly transition from actual to correct.
-                    } : {}}
-                    className={turnResult === 'lose' ? 'filter-red' : ''}
+                    style={setCountryImagePosition()}
+                    className={setCountryColor()}
                     alt='country shape'
                 />
             </Draggable>
