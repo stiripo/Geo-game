@@ -33,14 +33,14 @@ function App() {
 
   return (
     <div className="container">
-      <div className="left-side">
+      <div className="map-container">
         <img
           ref={MapRef}
           src={europeMap}
-          className='europe'
+          className='map'
           alt='europe map' />
       </div>
-      <div className="right-side">
+      <div className="game-info">
         <h1 className="big-heading">European Puzzle</h1>
         {puzzlePieces.map((country) => <PuzzlePiece
           key={country.name}

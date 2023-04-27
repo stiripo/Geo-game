@@ -12,7 +12,7 @@ body {
   grid-gap: 20px;
 }
 
-.europe {
+.map {
   position: relative;
 }
 
@@ -46,7 +46,7 @@ body {
   height: 280px;
 }
 
-.right-side {
+.game-info {
   justify-self: center;
   display: grid;
 }
