@@ -17,15 +17,21 @@ body {
 }
 
 .big-heading {
-  color: rgb(5, 154, 62);
+  /* font-family: 'Courier New', Courier, monospace; */
+  /* font-family: fantasy; */
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 60px;
   margin-bottom: 60px;
 }
 
 .country-name {
   height: 50px;
   margin-bottom: 40px;
-  color: rgb(5, 154, 62);
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 40px;
+  font-weight: 500;
+  color: #0ff407;
 }
 
 .invisible {
@@ -47,32 +53,60 @@ body {
 }
 
 .game-info {
-  justify-self: center;
   display: grid;
+  justify-items: start;
 }
 
 .score-section {
   align-self: flex-end;
+  padding-bottom: 80px;
+  font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
   font-size: 40px;
-  margin-bottom: 100px;
-}
-
-.score-board {
-  display: grid;
-  grid-template-columns: repeat(2, 50px);
-  gap: 60px;
-}
-
-.score-board > div {
   text-align: center;
 }
 
+.score-numbers{
+  display: grid;
+  grid-template-columns: repeat(2, 80px);
+  gap: 60px;
+  justify-content: center;
+  font-size: 60px;
+  line-height: 80px;
+}
+
+.score-title {
+  margin-bottom: 25px;
+  padding: 0px 5px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: black 2px solid;
+}
+
+/* .win::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -30px;
+  left: 35px;
+  height: 40px;
+  width: 10px;
+  background-color: #fff;
+  border: black solid 1px;
+  border-radius: 5px;
+} */
+
 .win {
+  /* position: relative; */
   background-color: #11be07;
+  border-radius: 15%;
+  border: black 2px solid;
 }
 
 .lose {
   background-color: #F70707;
+  border-radius: 15%;
+  border: black 2px solid;
 }
 
 @media only screen and (max-width: 600px) {
