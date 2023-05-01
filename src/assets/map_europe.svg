@@ -7,7 +7,7 @@
    width="867.73108"
    height="735"
    viewBox="0 0 1236.2816 1086.1172"
-   sodipodi:docname="newmap_gradient.svg"
+   sodipodi:docname="map_europe.svg"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -20,13 +20,13 @@
        inkscape:collect="always"
        id="linearGradient47760">
       <stop
-         style="stop-color:#415241;stop-opacity:1;"
+         style="stop-color:#0d0e17;stop-opacity:0;"
          offset="0"
-         id="stop47756" />
-      <stop
-         style="stop-color:#0f1246;stop-opacity:0;"
-         offset="1"
          id="stop47758" />
+      <stop
+         style="stop-color:#1d1d33;stop-opacity:1;"
+         offset="0.72484601"
+         id="stop47756" />
     </linearGradient>
     <inkscape:path-effect
        effect="powerstroke"
@@ -100,8 +100,8 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="1.0205406"
-     inkscape:cx="327.27752"
-     inkscape:cy="460.54023"
+     inkscape:cx="225.86069"
+     inkscape:cy="303.27064"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"

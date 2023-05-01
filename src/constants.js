@@ -1,6 +1,8 @@
 import spain from './assets/spain.svg';
 import portugal from './assets/portugal.svg';
 import france from './assets/france.svg';
+import germany from './assets/germany.svg';
+import belgium from './assets/belgium.svg';
 
 export const MAP_DIMENSIONS = {
     x: 900.675,
@@ -31,6 +33,22 @@ export const EUROPEAN_COUNTRIES = [
         left: 128.5625,
         top: 418.0375061035156,
         image: france
+    },
+    {
+        name: 'Germany',
+        width: 113.326,
+        height: 151.715,
+        left: 274.1499938964844,
+        top: 352.7250061035156,
+        image: germany
+    },
+    {
+        name: 'Belgium',
+        width: 45.091,
+        height: 41.279,
+        left: 232.15000915527344,
+        top: 411.7250061035156,
+        image: belgium
     }
 ];
 
