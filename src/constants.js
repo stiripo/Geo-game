@@ -12,42 +12,42 @@ export const MAP_DIMENSIONS = {
 export const EUROPEAN_COUNTRIES = [
     {
         name: 'Portugal',
-        width: 87.761,
-        height: 136.426,
-        left: 1.5625,
-        top: 555.0375366210938,
+        width: 68.086,
+        height: 100.969,
+        left: 2.1500000953674316,
+        top: 554.7250366210938,
         image: portugal
     },
     {
         name: 'Spain',
-        width: 248.771,
-        height: 224.412,
-        left: 25.5625,
-        top: 526.0375366210938,
+        width: 186.698,
+        height: 160.897,
+        left: 25.149999618530273,
+        top: 525.9000244140625,
         image: spain
     },
     {
         name: 'France',
-        width: 235.186,
-        height: 235.769,
-        left: 128.5625,
-        top: 418.0375061035156,
+        width: 169.574,
+        height: 172.589,
+        left: 128.15000915527344,
+        top: 417.6000061035156,
         image: france
     },
     {
         name: 'Germany',
-        width: 113.326,
-        height: 151.715,
+        width: 113.413,
+        height: 151.350,
         left: 274.1499938964844,
-        top: 352.7250061035156,
+        top: 352.6000061035156,
         image: germany
     },
     {
         name: 'Belgium',
-        width: 45.091,
-        height: 41.279,
-        left: 232.15000915527344,
-        top: 411.7250061035156,
+        width: 45.323,
+        height: 40.065,
+        left: 233.15000915527344,
+        top: 413.7250061035156,
         image: belgium
     }
 ];
