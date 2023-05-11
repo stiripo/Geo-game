@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="34.185001"
+   height="20.795"
+   viewBox="0 0 9.0447806 5.5020098"
+   version="1.1"
+   id="svg66797"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="russia.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview66799"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.72515432"
+     inkscape:cx="-39.301979"
+     inkscape:cy="58.608215"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs66794" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-77.573769,-133.34455)">
+    <path
+       style="fill:#01a808;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-dasharray:none"
+       d="m 81.616445,133.63943 c -0.222416,0.5819 0.06068,1.31984 -0.283398,1.85257 -0.42632,0.38061 -1.087434,0.0627 -1.598191,0.13422 -0.61608,0.0435 -1.469978,-0.21232 -1.904283,0.35899 -0.251453,0.52049 0.331271,0.92649 0.654341,1.23332 -0.151355,0.37943 -0.955747,0.93097 -0.435722,1.26307 2.496905,0.0181 5.11305,0.50855 7.545401,-0.30976 0.396325,-0.16156 0.923052,-0.35284 0.7722,-0.89282 -0.06495,-0.75832 0.234783,-1.6143 -0.143637,-2.31461 -0.448326,-0.68789 -1.389443,-0.34206 -2.061303,-0.4355 -0.840105,0.0758 -1.611331,-0.4679 -2.256417,-0.95276 -0.107645,-0.0858 -0.192965,0.0263 -0.288991,0.0633 z"
+       id="path66783" />
+  </g>
+</svg>
