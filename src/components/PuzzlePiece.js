@@ -50,7 +50,7 @@ export function PuzzlePiece(props) {
             setTimeout(() => {
                 setTurnEnd(true);
                 props.onTurnEnd();
-            }, 1500)
+            }, 500)
         };
     };
 
@@ -60,7 +60,7 @@ export function PuzzlePiece(props) {
                 position: 'absolute',
                 top: props.country.top + 'px',
                 left: props.country.left + 'px',
-                transition: 'all 0.3s ease-in',
+                transition: 'all 0.2s ease-in',
             }
         };
         if (readyToSnap) {

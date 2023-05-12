@@ -1,37 +1,34 @@
 body {
   background-color: rgb(42, 93, 186);
-
-  /* margin: 0px 0px 0px 40px; */
   margin: 0;
 }
 
 .container {
   position: relative;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: min-content auto;
   grid-gap: 20px;
 }
 
 .map {
   position: relative;
+  border-right: #4dce2d 4px solid;
 }
 
 .big-heading {
-  /* font-family: 'Courier New', Courier, monospace; */
-  /* font-family: fantasy; */
   font-family: 'Fredericka the Great', cursive;
-  font-size: 60px;
-  margin-bottom: 60px;
+  font-size: 46px;
+  margin-bottom: 30px;
+  letter-spacing: 8px;
 }
 
 .country-name {
   height: 50px;
-  margin-bottom: 40px;
-  /* font-family: 'Courier New', Courier, monospace; */
+  margin-bottom: 20px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 40px;
   font-weight: 500;
-  color: #0ff407;
+  color: #4dce2d;
 }
 
 .invisible {
@@ -47,7 +44,7 @@ filter: hue-rotate(235deg) saturate(350%) brightness(90%);
 .filter-green {
   transition: filter 0.0001s ease-in 0.7s;
   /* filter: brightness(0) saturate(100%) invert(64%) sepia(27%) saturate(7088%) hue-rotate(78deg) brightness(93%) contrast(106%) */
-filter: hue-rotate(30deg) saturate(550%) brightness(60%);
+filter: hue-rotate(320deg) saturate(2050%) brightness(60%);
 }
 
 .country-info {
@@ -55,16 +52,16 @@ filter: hue-rotate(30deg) saturate(550%) brightness(60%);
 }
 
 .game-info {
-  display: grid;
-  justify-items: start;
+ justify-self: center;
 }
 
 .score-section {
-  align-self: flex-end;
-  padding-bottom: 80px;
+  position: fixed;
+  bottom: 20px;
+  padding-bottom: 40px;
   font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
 }
 
@@ -85,21 +82,7 @@ filter: hue-rotate(30deg) saturate(550%) brightness(60%);
   border: black 2px solid;
 }
 
-/* .win::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: -30px;
-  left: 35px;
-  height: 40px;
-  width: 10px;
-  background-color: #fff;
-  border: black solid 1px;
-  border-radius: 5px;
-} */
-
 .win {
-  /* position: relative; */
   background-color: #11be07;
   border-radius: 15%;
   border: black 2px solid;

@@ -41,7 +41,7 @@ function App() {
           alt='europe map' />
       </div>
       <div className="game-info">
-        <h2 className="big-heading">EUROPE</h2>
+        <p className="big-heading">EUROPE</p>
         {puzzlePieces.map((country) => <PuzzlePiece
           key={country.name}
           country={country}
