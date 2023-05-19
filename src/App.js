@@ -42,6 +42,10 @@ function App() {
       </div>
       <div className="game-info">
         <p className="big-heading">EUROPE</p>
+        <ScoreBoard
+          win={winScore}
+          lose={loseScore}
+        />
         {puzzlePieces.map((country) => <PuzzlePiece
           key={country.name}
           country={country}
@@ -50,10 +54,6 @@ function App() {
           lose={() => setLoseScore(loseScore - 1)}
           myRef={MapRef}
         />)}
-        <ScoreBoard
-          win={winScore}
-          lose={loseScore}
-        />
       </div>
     </div>
   );
