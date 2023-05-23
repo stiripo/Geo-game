@@ -145,9 +145,9 @@ export const EUROPEAN_COUNTRIES = [
     {
         name: 'Slovakia',
         width: 74.337,
-        height: 38.089,
+        height: 37.089,
         left: 455.1499938964844,
-        top: 459.7250061035156,
+        top: 458.7250061035156,
         image: slovakia
     },
     {
@@ -211,14 +211,14 @@ export const EUROPEAN_COUNTRIES = [
         width: 28.643,
         height: 34.060,
         left: 481.1499938964844,
-        top: 578.7250366210938,
+        top: 579.5250366210938,
         image: montenegro
     },
     {
         name: 'Albania',
         width: 28.542,
         height: 59.210,
-        left: 495.1499938964844,
+        left: 494.4499938964844,
         top: 597.9000244140625,
         image: albania
     },
@@ -297,8 +297,8 @@ export const EUROPEAN_COUNTRIES = [
     {
         name: 'Finland',
         width: 107.086,
-        height: 210.965,
-        left: 474.1499938964844,
+        height: 209.265,
+        left: 473.9499938964844,
         top: 39.72500228881836,
         image: finland
     },
@@ -314,7 +314,7 @@ export const EUROPEAN_COUNTRIES = [
         name: 'Norway',
         width: 216.464,
         height: 270.758,
-        left: 330.1499938964844,
+        left: 329.4499938964844,
         top: 17.725000381469727,
         image: norway
     },
@@ -346,8 +346,8 @@ export const EUROPEAN_COUNTRIES = [
         name: 'United Kingdom',
         width: 104.064,
         height: 193.975,
-        left: 166.8000030517578,
-        top: 223.90000915527344,
+        left: 166.2000030517578,
+        top: 224.40000915527344,
         image: britain
     },
     {

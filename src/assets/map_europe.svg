@@ -7,7 +7,7 @@
    width="907.73102"
    height="752"
    viewBox="0 0 1293.2707 1111.2383"
-   sodipodi:docname="map_europe_tall.svg"
+   sodipodi:docname="map_europe.svg"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -16,6 +16,12 @@
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
      id="defs240">
+    <rect
+       x="-131.30296"
+       y="168.53813"
+       width="257.70655"
+       height="182.25635"
+       id="rect1766" />
     <inkscape:path-effect
        effect="spiro"
        id="path-effect1275"
@@ -30,12 +36,12 @@
        inkscape:collect="always"
        id="linearGradient47760">
       <stop
-         style="stop-color:#3a3e5e;stop-opacity:0;"
+         style="stop-color:#232534;stop-opacity:0;"
          offset="0"
          id="stop47758" />
       <stop
          style="stop-color:#1d1d33;stop-opacity:1;"
-         offset="0.72484601"
+         offset="0.66735113"
          id="stop47756" />
     </linearGradient>
     <inkscape:path-effect
@@ -110,9 +116,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="2.8865247"
-     inkscape:cx="640.04302"
-     inkscape:cy="688.0246"
+     inkscape:zoom="1.0205406"
+     inkscape:cx="425.75474"
+     inkscape:cy="389.49945"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
@@ -159,5 +165,111 @@
        id="path1273"
        inkscape:path-effect="#path-effect1275"
        inkscape:original-d="m 1173.1831,1111.7831 c -0.085,1.3652 -0.2013,2.7287 -0.2559,4.0955 -0.049,1.215 0.3332,7.1911 0,8.1909 -0.6146,1.8436 -0.1914,3.9637 -0.512,5.8873 -0.5005,3.0028 -0.5119,5.6188 -0.5119,8.7028" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25.6136px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#0d0d5f;fill-opacity:1;stroke:#0d0d5f;stroke-width:1.86192;stroke-opacity:1"
+       x="407.81531"
+       y="500.64844"
+       id="text306"><tspan
+         sodipodi:role="line"
+         id="tspan304"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25.6136px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#0d0d5f;fill-opacity:1;stroke:#0d0d5f;stroke-width:1.86192;stroke-opacity:1"
+         x="407.81531"
+         y="500.64844">North Sea</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25.6136px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#0d0d5f;fill-opacity:1;stroke:#0d0d5f;stroke-width:1.86192;stroke-opacity:1"
+       x="151.52492"
+       y="769.97058"
+       id="text310"><tspan
+         sodipodi:role="line"
+         id="tspan308"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25.6136px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#0d0d5f;fill-opacity:1;stroke:#0d0d5f;stroke-width:1.86192;stroke-opacity:1"
+         x="151.52492"
+         y="769.97058">Bay of Biscay</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25.6136px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#0d0d5f;fill-opacity:1;stroke:#0d0d5f;stroke-width:1.86192;stroke-opacity:1"
+       x="360.03235"
+       y="1046.5326"
+       id="text314"><tspan
+         sodipodi:role="line"
+         id="tspan312"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25.6136px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#0d0d5f;fill-opacity:1;stroke:#0d0d5f;stroke-width:1.86192;stroke-opacity:1"
+         x="360.03235"
+         y="1046.5326">Mediterranean Sea</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25.6136px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#0d0d5f;fill-opacity:1;stroke:#0d0d5f;stroke-width:1.86192;stroke-opacity:1"
+       x="269.68231"
+       y="815.36176"
+       id="text318"
+       transform="rotate(-31.230062)"><tspan
+         sodipodi:role="line"
+         id="tspan316"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25.6136px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#0d0d5f;fill-opacity:1;stroke:#0d0d5f;stroke-width:1.86192;stroke-opacity:1"
+         x="269.68231"
+         y="815.36176">Baltic Sea</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25.6136px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#0d0d5f;fill-opacity:1;stroke:#0d0d5f;stroke-width:1.86192;stroke-opacity:1"
+       x="1005.8263"
+       y="845.26495"
+       id="text322"><tspan
+         sodipodi:role="line"
+         id="tspan320"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25.6136px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#0d0d5f;fill-opacity:1;stroke:#0d0d5f;stroke-width:1.86192;stroke-opacity:1"
+         x="1005.8263"
+         y="845.26495">Black Sea</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:31.52449078px;fill:#05040d;stroke:#070712;stroke-width:1.86192;-inkscape-font-specification:'Yu Gothic UI, Normal';font-family:'Yu Gothic UI';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-opacity:1;fill-opacity:1"
+       x="1014.514"
+       y="984.26984"
+       id="text326"><tspan
+         sodipodi:role="line"
+         id="tspan324"
+         style="stroke-width:1.86192;-inkscape-font-specification:'Yu Gothic UI, Normal';font-family:'Yu Gothic UI';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:31.52449078px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#070712;stroke-opacity:1;fill:#05040d;fill-opacity:1"
+         x="1014.514"
+         y="984.26984">Turkey</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:31.52449078px;fill:#05040d;stroke:#070712;stroke-width:1.86192;-inkscape-font-specification:'Yu Gothic UI, Normal';font-family:'Yu Gothic UI';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-opacity:1;fill-opacity:1"
+       x="979.76282"
+       y="345.71585"
+       id="text380"><tspan
+         sodipodi:role="line"
+         id="tspan378"
+         style="stroke-width:1.86192;-inkscape-font-specification:'Yu Gothic UI, Normal';font-family:'Yu Gothic UI';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:31.52449078px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#070712;stroke-opacity:1;fill:#05040d;fill-opacity:1"
+         x="979.76282"
+         y="345.71585">Russia</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(1.4777105,0,0,1.4777105,19.759787,25.714844)"
+       id="text1764"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect1766);display:inline;fill:#000080;stroke:#000000;stroke-width:1.26" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.584px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#12128d;fill-opacity:1;stroke:#0d0d5f;stroke-width:1.86192;stroke-opacity:1"
+       x="1259.2207"
+       y="819.20154"
+       id="text3330"><tspan
+         sodipodi:role="line"
+         id="tspan3328"
+         style="stroke-width:1.86192"
+         x="1259.2207"
+         y="819.20154" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.5839px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#05040d;fill-opacity:1;stroke:#070712;stroke-width:1.44308;stroke-opacity:1"
+       x="1096.2366"
+       y="937.95239"
+       id="text3384"
+       transform="scale(1.1341533,0.88171502)"><tspan
+         sodipodi:role="line"
+         id="tspan3382"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.5839px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#05040d;fill-opacity:1;stroke:#070712;stroke-width:1.44308;stroke-opacity:1"
+         x="1096.2366"
+         y="937.95239">Georgia</tspan></text>
   </g>
 </svg>
