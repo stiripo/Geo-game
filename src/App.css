@@ -3,7 +3,34 @@ body {
   margin: 0;
 }
 
-.container {
+.result-screen-hidden {
+ display: none;
+}
+
+.result-screen-shown {
+  display: block;
+  position: absolute;
+  width:fit-content;
+  left: 40%;
+  top: 30%;
+  background-color: white;
+  height: 200px;
+  padding: 30px 50px;
+  border:#F70707 5px solid;
+  border-radius: 5%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+.result-percent {
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 80px;
+  color: #F70707;
+  margin: 40px auto;
+}
+
+.game-field {
   position: relative;
   display: grid;
   grid-template-columns: min-content auto;
@@ -24,7 +51,7 @@ body {
 
 .country-name {
   margin-bottom: 20px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 40px;
   font-weight: 500;
   color: black;
@@ -58,8 +85,7 @@ filter: hue-rotate(320deg) saturate(2050%) brightness(60%);
 
 .score-section {
   padding-bottom: 40px;
-  font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-weight: bold;
+  font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
   text-align: center;
 }
@@ -95,7 +121,7 @@ filter: hue-rotate(320deg) saturate(2050%) brightness(60%);
 }
 
 @media only screen and (max-width: 768px) {
-  .container {
+  .game-field {
     display: block;
     width: fit-content;
   }

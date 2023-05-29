@@ -1,6 +1,8 @@
 import europeMap from './assets/map_europe_no_borders.svg';
 import { EUROPEAN_COUNTRIES } from './constants';
+
 import './App.css';
+
 import { PuzzlePiece } from './components/PuzzlePiece';
 import { ScoreBoard } from './components/ScoreBoard';
 import { useState } from 'react';
@@ -21,6 +23,7 @@ function App() {
   let [winScore, setWinScore] = useState(0);
   let [loseScore, setLoseScore] = useState(0);
   let [puzzlePieces, setPuzzlePieces] = useState([initialState]);
+  let [gameEnd, setGameEnd] = useState(false);
   const MapRef = useRef(null);
 
   function addNewPuzzlePiece() {
@@ -28,11 +31,16 @@ function App() {
       let newPuzzlePiece = pickRandomCountry();
       let allPuzzlePieces = [...puzzlePieces, newPuzzlePiece];
       setPuzzlePieces(allPuzzlePieces);
+
     }
   }
 
+  function endGame() {
+    setTimeout(() => setGameEnd(true), 2000);
+  }
+
   return (
-    <div className="container">
+    <div className='game-field'>
       <div className="map-container">
         <img
           ref={MapRef}
@@ -49,13 +57,18 @@ function App() {
         {puzzlePieces.map((country) => <PuzzlePiece
           key={country.name}
           country={country}
-          onTurnEnd={addNewPuzzlePiece}
+          onTurnEnd={EUROPEAN_COUNTRIES.length > 0 ? addNewPuzzlePiece : endGame}
           win={() => setWinScore(winScore + 1)}
           lose={() => setLoseScore(loseScore - 1)}
           myRef={MapRef}
         />)}
+        <div className={gameEnd ? 'result-screen-shown' : 'result-screen-hidden'}>
+          Your result is:
+          <div className='result-percent'>{Math.round(winScore * 100 / (winScore - loseScore))}%</div>
+        </div>
       </div>
     </div>
+
   );
 }
 
