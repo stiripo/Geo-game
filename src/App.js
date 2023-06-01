@@ -1,10 +1,10 @@
 import europeMap from './assets/map_europe_no_borders.svg';
 import { EUROPEAN_COUNTRIES } from './constants';
-
 import './App.css';
-
 import { PuzzlePiece } from './components/PuzzlePiece';
 import { ScoreBoard } from './components/ScoreBoard';
+import { ResultBox } from './components/ResultBox';
+import { Map } from './components/Map';
 import { useState } from 'react';
 import { useRef } from 'react';
 
@@ -41,13 +41,10 @@ function App() {
 
   return (
     <div className='game-field'>
-      <div className="map-container">
-        <img
-          ref={MapRef}
-          src={europeMap}
-          className='map'
-          alt='europe map' />
-      </div>
+      <Map
+        src={europeMap}
+        ref={MapRef}
+      />
       <div className="game-info">
         <p className="big-heading">EUROPE</p>
         <ScoreBoard
@@ -62,10 +59,11 @@ function App() {
           lose={() => setLoseScore(loseScore - 1)}
           myRef={MapRef}
         />)}
-        <div className={gameEnd ? 'result-screen-shown' : 'result-screen-hidden'}>
-          Your result is:
-          <div className='result-percent'>{Math.round(winScore * 100 / (winScore - loseScore))}%</div>
-        </div>
+        {gameEnd &&
+          <ResultBox
+            result={Math.round(winScore * 100 / (winScore - loseScore)) + '%'}
+          />
+        }
       </div>
     </div>
 
@@ -73,3 +71,6 @@ function App() {
 }
 
 export default App;
+
+
+// game-info component via props.children?

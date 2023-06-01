@@ -3,11 +3,7 @@ body {
   margin: 0;
 }
 
-.result-screen-hidden {
- display: none;
-}
-
-.result-screen-shown {
+.result-box {
   display: block;
   position: absolute;
   width:fit-content;
