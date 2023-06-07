@@ -1,6 +1,7 @@
-import { ERROR_MARGIN } from '../constants';
+import { ERROR_MARGIN } from '../../constants';
 import Draggable from 'react-draggable';
 import { useState, useRef } from 'react';
+import styles from './PuzzlePiece.module.css';
 
 
 export function PuzzlePiece(props) {
@@ -74,18 +75,18 @@ export function PuzzlePiece(props) {
 
     function setCountryColor() {
         if (turnResult === 'lose') {
-            return 'filter-red'
+            return styles.filter_red;
         };
         if (turnResult === 'win') {
-            return 'filter-green'
+            return styles.filter_green;
         }
     }
 
     return (
         <div
-            className={readyToSnap ? 'invisible' : 'country-info'}
+            className={readyToSnap ? styles.invisible : styles.country_info}
         >
-            <div className="country-name">{readyToSnap ? '' : props.country.name}</div>
+            <div className={styles.country_name}>{readyToSnap ? '' : props.country.name}</div>
             <Draggable
                 nodeRef={nodeRef}
                 onStart={handleDragStart}

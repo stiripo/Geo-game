@@ -1,10 +1,10 @@
 import europeMap from './assets/map_europe_no_borders.svg';
 import { EUROPEAN_COUNTRIES } from './constants';
 import './App.css';
-import { PuzzlePiece } from './components/PuzzlePiece';
-import { ScoreBoard } from './components/ScoreBoard';
-import { ResultBox } from './components/ResultBox';
-import { Map } from './components/Map';
+import { PuzzlePiece } from './components/PuzzlePiece/PuzzlePiece.js';
+import { ScoreBoard } from './components/ScoreBoard/ScoreBoard.js';
+import { ResultBox } from './components/ResultBox/ResultBox.js';
+import { Map } from './components/Map/Map.js';
 import { useState } from 'react';
 import { useRef } from 'react';
 
@@ -40,13 +40,13 @@ function App() {
   }
 
   return (
-    <div className='game-field'>
+    <div className='game_field'>
       <Map
         src={europeMap}
         ref={MapRef}
       />
-      <div className="game-info">
-        <p className="big-heading">EUROPE</p>
+      <div className="game_info">
+        <p className="big_heading">EUROPE</p>
         <ScoreBoard
           win={winScore}
           lose={loseScore}
