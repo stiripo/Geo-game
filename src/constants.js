@@ -40,11 +40,6 @@ import moldova from './assets/moldova.svg';
 import ukraine from './assets/ukraine.svg';
 
 
-export const MAP_DIMENSIONS = {
-    x: 900.675,
-    y: 734.475,
-}
-
 export const EUROPEAN_COUNTRIES = [
     {
         name: 'Portugal',

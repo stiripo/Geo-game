@@ -25,7 +25,7 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.72515432"
-     inkscape:cx="46.197063"
+     inkscape:cx="-142.72824"
      inkscape:cy="-272.35582"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
@@ -41,7 +41,7 @@
      id="layer1"
      transform="translate(-55.194025,-221.01697)">
     <path
-       style="fill:#01a808;stroke:#000000;stroke-width:0.4;stroke-dasharray:none"
+       style="fill:#f0ef19;stroke:#000000;stroke-width:0.4;stroke-dasharray:none;fill-opacity:1"
        d="m 55.621572,221.28259 c -0.334401,0.38679 -0.316693,1.07132 0.164704,1.33375 0.391549,0.22466 0.913653,0.0225 1.205206,-0.27588 0.239871,-0.36824 -0.166,-0.6921 -0.464749,-0.84078 -0.279654,-0.1269 -0.598527,-0.42015 -0.905161,-0.21709 z"
        id="path75999" />
   </g>

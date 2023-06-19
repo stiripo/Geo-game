@@ -71,6 +71,3 @@ function App() {
 }
 
 export default App;
-
-
-// game-info component via props.children?

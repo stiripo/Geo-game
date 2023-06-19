@@ -24,8 +24,6 @@ export function PuzzlePiece(props) {
         const mapX = props.myRef.current.getBoundingClientRect().left + window.pageXOffset;
         const countryX = event.target.getBoundingClientRect().left + window.pageXOffset;
         const countryY = event.target.getBoundingClientRect().top + window.pageYOffset;
-
-        console.log(`Left: ${countryX}, Top: ${countryY}`);
         const difX = Math.abs(countryX - mapX - props.country.left);
         const difY = Math.abs(countryY - mapY - props.country.top);
         const isCloseEnough = Math.sqrt(difX ** 2 + difY ** 2) < ERROR_MARGIN;
@@ -34,9 +32,6 @@ export function PuzzlePiece(props) {
         setReadyToSnap(() => {
             return isCloseEnough || currentAttempt === 3;
         });
-        // if (isCloseEnough || currentAttempt === 3) {
-        //     props.onTurnEnd();
-        // }
         if (!isCloseEnough && currentAttempt === 3) {
             setTurnResult('lose');
             props.lose();

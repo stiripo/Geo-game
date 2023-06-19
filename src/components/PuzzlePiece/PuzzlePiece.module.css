@@ -16,10 +16,10 @@
 
   .filter_red {
     transition: filter 0.0001s ease-in 0.7s;
-    filter: hue-rotate(235deg) saturate(350%) brightness(90%);
+    filter: hue-rotate(290deg) saturate(900%) brightness(90%);
   }
 
   .filter_green {
     transition: filter 0.0001s ease-in 0.7s;
-    filter: hue-rotate(320deg) saturate(2050%) brightness(60%);
+    filter: hue-rotate(50deg) saturate(2050%) brightness(60%);
   }
