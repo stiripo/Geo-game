@@ -5,8 +5,8 @@ import { PuzzlePiece } from './components/PuzzlePiece/PuzzlePiece.js';
 import { ScoreBoard } from './components/ScoreBoard/ScoreBoard.js';
 import { ResultBox } from './components/ResultBox/ResultBox.js';
 import { Map } from './components/Map/Map.js';
-import { useState } from 'react';
-import { useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import { createServer } from './server.js';
 
 
 function pickRandomCountry() {
@@ -25,6 +25,12 @@ function App() {
   let [puzzlePieces, setPuzzlePieces] = useState([initialState]);
   let [gameEnd, setGameEnd] = useState(false);
   const MapRef = useRef(null);
+
+  useEffect(() => {
+    fetch('/api/stats')
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+  }, []);
 
   function addNewPuzzlePiece() {
     if (EUROPEAN_COUNTRIES.length > 0) {
