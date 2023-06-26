@@ -6,7 +6,7 @@ import { ScoreBoard } from './components/ScoreBoard/ScoreBoard.js';
 import { ResultBox } from './components/ResultBox/ResultBox.js';
 import { Map } from './components/Map/Map.js';
 import { useState, useRef, useEffect } from 'react';
-import { createServer } from './server.js';
+// import { createServer } from './server.js';
 
 
 function pickRandomCountry() {
@@ -31,6 +31,13 @@ function App() {
       .then((response) => response.json())
       .then((data) => console.log(data))
   }, []);
+
+  useEffect(() => {
+    fetch('http://localhost:8080')
+      .then((response) => response.text())
+      .then((data) => console.log(data))
+  }, []);
+
 
   function addNewPuzzlePiece() {
     if (EUROPEAN_COUNTRIES.length > 0) {
