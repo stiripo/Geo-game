@@ -1,3 +1,4 @@
+/* eslint-disable no-labels */
 import europeMap from './assets/map_europe_no_borders.svg';
 import { EUROPEAN_COUNTRIES } from './constants';
 import './App.css';
@@ -24,19 +25,39 @@ function App() {
   let [loseScore, setLoseScore] = useState(0);
   let [puzzlePieces, setPuzzlePieces] = useState([initialState]);
   let [gameEnd, setGameEnd] = useState(false);
+  // let [endResult, setEndResult] = useState(0);
   const MapRef = useRef(null);
 
-  useEffect(() => {
-    fetch('/api/stats')
-      .then((response) => response.json())
-      .then((data) => console.log(data))
-  }, []);
+  // useEffect(() => {
+  //   fetch('/api/stats')
+  //     .then((response) => response.json())
+  //     .then((data) => console.log(data))
+  // }, []);
+
+  TODO:
+  //useEffect fires twice in dev mode;
 
   useEffect(() => {
     fetch('http://localhost:8080')
       .then((response) => response.text())
-      .then((data) => console.log(data))
+      .then((data) => console.log(`Best result so far is ${data}`))
   }, []);
+
+  useEffect(() => {
+    if (gameEnd) {
+      let endResult = calcEndResult();
+      fetch('http://localhost:8080', {
+        method: 'POST',
+        body: JSON.stringify(endResult),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          console.log(`New result ${endResult} has been sent to server`)
+        })
+    }
+  });
 
 
   function addNewPuzzlePiece() {
@@ -49,8 +70,17 @@ function App() {
   }
 
   function endGame() {
-    setTimeout(() => setGameEnd(true), 2000);
+    setTimeout(() => {
+      setGameEnd(true);
+    }, 2000);
   }
+
+  function calcEndResult() {
+    return (Math.round(winScore * 100 / (winScore - loseScore)));
+  }
+
+  TODO:
+  // endResult calculated incorrectly (delay in the last score in the game);
 
   return (
     <div className='game_field'>
@@ -74,7 +104,7 @@ function App() {
         />)}
         {gameEnd &&
           <ResultBox
-            result={Math.round(winScore * 100 / (winScore - loseScore)) + '%'}
+            result={calcEndResult() + '%'}
           />
         }
       </div>
@@ -84,3 +114,4 @@ function App() {
 }
 
 export default App;
+
