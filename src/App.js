@@ -7,7 +7,6 @@ import { ScoreBoard } from './components/ScoreBoard/ScoreBoard.js';
 import { ResultBox } from './components/ResultBox/ResultBox.js';
 import { Map } from './components/Map/Map.js';
 import { useState, useRef, useEffect } from 'react';
-// import { createServer } from './server.js';
 
 
 function pickRandomCountry() {
