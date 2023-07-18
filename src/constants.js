@@ -65,22 +65,22 @@ export const EUROPEAN_COUNTRIES = [
         top: 416.6625061035156,
         image: france
     },
-    // {
-    //     name: 'Germany',
-    //     width: 114.705,
-    //     height: 153.474,
-    //     left: 316.1499938964844,
-    //     top: 351.7250061035156,
-    //     image: germany
-    // },
-    // {
-    //     name: 'Belgium',
-    //     width: 46.944,
-    //     height: 42.664,
-    //     left: 274.15000915527344,
-    //     top: 411.82501220703125,
-    //     image: belgium
-    // },
+    {
+        name: 'Germany',
+        width: 114.705,
+        height: 153.474,
+        left: 316.1499938964844,
+        top: 351.7250061035156,
+        image: germany
+    },
+    {
+        name: 'Belgium',
+        width: 46.944,
+        height: 42.664,
+        left: 274.15000915527344,
+        top: 411.82501220703125,
+        image: belgium
+    },
     // {
     //     name: 'Switzerland',
     //     width: 63.611,

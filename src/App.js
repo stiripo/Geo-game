@@ -8,24 +8,22 @@ import { ResultBox } from './components/ResultBox/ResultBox.js';
 import { Map } from './components/Map/Map.js';
 import { useState, useRef, useEffect } from 'react';
 
-//TODO: pickRandomCountry function is not pure as it mutates the countries list
-function pickRandomCountry() {
-  let index = Math.floor(Math.random() * EUROPEAN_COUNTRIES.length);
-  let country = EUROPEAN_COUNTRIES[index];
-  EUROPEAN_COUNTRIES.splice(index, 1);
-  return country;
-}
 
-const initialState = pickRandomCountry();
+let shuffledList = Array.from(EUROPEAN_COUNTRIES);
+for (let i = shuffledList.length - 1; i > 0; i--) {
+  let random = Math.floor(Math.random() * (1 + i));
+  [shuffledList[i], shuffledList[random]] = [shuffledList[random], shuffledList[i]]
+}
 
 function App() {
 
   let [winScore, setWinScore] = useState(0);
   let [loseScore, setLoseScore] = useState(0);
-  let [puzzlePieces, setPuzzlePieces] = useState([initialState]);
   let [gameEnd, setGameEnd] = useState(false);
   let [bestResultData, setBestresultData] = useState(null);
+  let [index, setIndex] = useState(1);
   const MapRef = useRef(null);
+
 
   //TODO: useEffect fires twice in dev mode;
   //TODO: do I need useEffect?
@@ -52,15 +50,8 @@ function App() {
     }
   });
 
-  function addNewPuzzlePiece() {
-    if (EUROPEAN_COUNTRIES.length > 0) {
-      let newPuzzlePiece = pickRandomCountry();
-      let allPuzzlePieces = [...puzzlePieces, newPuzzlePiece];
-      setPuzzlePieces(allPuzzlePieces);
-    }
-  }
-
   function endGame() {
+    console.log("END GAME")
     setTimeout(() => {
       setGameEnd(true);
     }, 2000);
@@ -83,10 +74,17 @@ function App() {
           lose={loseScore}
         />
         <div>The best result ever scored in this game is {bestResultData}%</div>
-        {puzzlePieces.map((country) => <PuzzlePiece
+        {shuffledList.slice(0, index).map((country) => <PuzzlePiece
           key={country.name}
           country={country}
-          onTurnEnd={EUROPEAN_COUNTRIES.length > 0 ? addNewPuzzlePiece : endGame}
+          onTurnEnd={() => {
+            if (shuffledList.length > index) {
+              setIndex(index + 1)
+            } else {
+              endGame();
+            }
+          }
+          }
           win={() => setWinScore(winScore + 1)}
           lose={() => setLoseScore(loseScore - 1)}
           myRef={MapRef}
