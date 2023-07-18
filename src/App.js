@@ -8,7 +8,7 @@ import { ResultBox } from './components/ResultBox/ResultBox.js';
 import { Map } from './components/Map/Map.js';
 import { useState, useRef, useEffect } from 'react';
 
-
+//TODO: pickRandomCountry function is not pure as it mutates the countries list
 function pickRandomCountry() {
   let index = Math.floor(Math.random() * EUROPEAN_COUNTRIES.length);
   let country = EUROPEAN_COUNTRIES[index];
@@ -24,22 +24,16 @@ function App() {
   let [loseScore, setLoseScore] = useState(0);
   let [puzzlePieces, setPuzzlePieces] = useState([initialState]);
   let [gameEnd, setGameEnd] = useState(false);
-  // let [endResult, setEndResult] = useState(0);
+  let [bestResultData, setBestresultData] = useState(null);
   const MapRef = useRef(null);
 
-  // useEffect(() => {
-  //   fetch('/api/stats')
-  //     .then((response) => response.json())
-  //     .then((data) => console.log(data))
-  // }, []);
-
-  TODO:
-  //useEffect fires twice in dev mode;
+  //TODO: useEffect fires twice in dev mode;
+  //TODO: do I need useEffect?
 
   useEffect(() => {
     fetch('http://localhost:8080')
       .then((response) => response.text())
-      .then((data) => console.log(`Best result so far is ${data}`))
+      .then((data) => setBestresultData(data))
   }, []);
 
   useEffect(() => {
@@ -58,13 +52,11 @@ function App() {
     }
   });
 
-
   function addNewPuzzlePiece() {
     if (EUROPEAN_COUNTRIES.length > 0) {
       let newPuzzlePiece = pickRandomCountry();
       let allPuzzlePieces = [...puzzlePieces, newPuzzlePiece];
       setPuzzlePieces(allPuzzlePieces);
-
     }
   }
 
@@ -78,9 +70,6 @@ function App() {
     return (Math.round(winScore * 100 / (winScore - loseScore)));
   }
 
-  TODO:
-  // endResult calculated incorrectly (delay in the last score in the game);
-
   return (
     <div className='game_field'>
       <Map
@@ -93,6 +82,7 @@ function App() {
           win={winScore}
           lose={loseScore}
         />
+        <div>The best result ever scored in this game is {bestResultData}%</div>
         {puzzlePieces.map((country) => <PuzzlePiece
           key={country.name}
           country={country}
