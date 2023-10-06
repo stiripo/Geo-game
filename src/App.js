@@ -24,10 +24,6 @@ function App() {
   let [index, setIndex] = useState(1);
   const MapRef = useRef(null);
 
-
-  //TODO: useEffect fires twice in dev mode;
-  //TODO: do I need useEffect?
-
   useEffect(() => {
     fetch('http://localhost:8080')
       .then((response) => response.text())
@@ -73,7 +69,7 @@ function App() {
           win={winScore}
           lose={loseScore}
         />
-        <div>The best result ever scored in this game is {bestResultData}%</div>
+        <div className='best_result'>The best result ever scored in this game is <span>{bestResultData}%</span></div>
         {shuffledList.slice(0, index).map((country) => <PuzzlePiece
           key={country.name}
           country={country}
