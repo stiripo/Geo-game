@@ -30,22 +30,6 @@ function App() {
       .then((data) => setBestresultData(data))
   }, []);
 
-  useEffect(() => {
-    if (gameEnd) {
-      let endResult = calcEndResult();
-      fetch('http://localhost:8080', {
-        method: 'POST',
-        body: JSON.stringify(endResult),
-      })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-          }
-          console.log(`New result ${endResult} has been sent to server`)
-        })
-    }
-  });
-
   function endGame() {
     console.log("END GAME")
     setTimeout(() => {
@@ -87,7 +71,7 @@ function App() {
         />)}
         {gameEnd &&
           <ResultBox
-            result={calcEndResult() + '%'}
+            result={calcEndResult()}
           />
         }
       </div>
