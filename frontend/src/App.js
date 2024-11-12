@@ -20,15 +20,15 @@ function App() {
   let [winScore, setWinScore] = useState(0);
   let [loseScore, setLoseScore] = useState(0);
   let [gameEnd, setGameEnd] = useState(false);
-  let [bestResultData, setBestresultData] = useState(null);
+  // let [bestResultData, setBestresultData] = useState(null);
   let [index, setIndex] = useState(1);
   const MapRef = useRef(null);
 
-  useEffect(() => {
-    fetch('http://localhost:8080')
-      .then((response) => response.text())
-      .then((data) => setBestresultData(data))
-  }, []);
+  // useEffect(() => {
+  //   fetch('http://localhost:8080')
+  //     .then((response) => response.text())
+  //     .then((data) => setBestresultData(data))
+  // }, []);
 
   function endGame() {
     console.log("END GAME")
@@ -53,7 +53,7 @@ function App() {
           win={winScore}
           lose={loseScore}
         />
-        <div className='best_result'>The best result ever scored in this game is <span>{bestResultData}%</span></div>
+        {/* <div className='best_result'>The best result ever scored in this game is <span>{bestResultData}%</span></div> */}
         {shuffledList.slice(0, index).map((country) => <PuzzlePiece
           key={country.name}
           country={country}
